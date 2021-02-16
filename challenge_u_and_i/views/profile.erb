@@ -1,0 +1,20 @@
+<!doctype html>
+<html>
+<head>
+  <h1><%= params['user'].to_s.capitalize %></h1>
+  </div id="contents">
+    <ul>
+      <li><a><%= "Email: #{@email}" %></a></li>
+      <li><a><%= "Interests: #{@interests}" %></a></li>
+    </ul>
+  </div>
+  <div id="other users">
+    <% @users.each do |user, user_info| %>
+      <% unless user.to_s == params['user'] %>
+        <a href="/<%= user %>"><%= user %></a>
+      <% end %> 
+    <% end %>
+    <br><br><a href="/">HOME</a>
+  </div>
+</head>
+</html>

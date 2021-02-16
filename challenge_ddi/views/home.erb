@@ -1,0 +1,22 @@
+<!doctype html>
+<html>
+<head>
+    <h1>File Directory</h1>
+  </div id="listing">
+    <ul>
+      <% @files.each do |current_file| %>
+        <li>
+          <a href="/<%= current_file %>"><%= current_file %></a>
+        </li>
+      <% end %>
+    </ul>
+  </div>
+  <div id="order_reversal_links">
+    <% if params['sorted'] == 'descending' %>
+      <a href="/">Ascending Order</a>
+    <% else %>
+      <a href="/?sorted=descending">Descending Order</a>
+    <% end %>
+  </div>
+</head>
+</html>

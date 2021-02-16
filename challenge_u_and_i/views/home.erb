@@ -1,0 +1,13 @@
+<!doctype html>
+<html>
+<head>
+  <div id="header">
+    <h1>USERS</h1>
+  </div>
+  </div id="contents">
+    <% @users.each do |user, user_info| %>
+      <li><a href="/<%= user %>"><%= user %></a></li>
+    <% end %>
+  </div>
+</head>
+</html>
